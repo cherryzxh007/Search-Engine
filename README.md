@@ -2,19 +2,19 @@ Folders :
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 doc :
-	- a text file about mysql database setting
+	 a text file about mysql database setting
 	
 libs :
-	- all library used in this project, in which invertedindex.jar is the entire lab4 application 
+	 all library used in this project, in which invertedindex.jar is the entire lab4 application 
 	
 src : 
-	- source java files
+	 source java files
 
 static :
-	- html, css, javascript or image files
+	 html, css, javascript or image files
 
 template :
-	- string template files
+	 string template files
 	
 	
 	
