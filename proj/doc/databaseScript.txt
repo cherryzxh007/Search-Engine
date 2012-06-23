@@ -1,0 +1,41 @@
+CREATE TABLE users (
+  `userid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) DEFAULT NULL,
+  `pw` varchar(50) DEFAULT NULL,
+  `firstname` varchar(200) DEFAULT NULL,
+  `lastname` varchar(200) DEFAULT NULL,
+  `dateOfCreated` date DEFAULT NULL,
+  `groupid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`userid`),
+  UNIQUE KEY `uc_username` (`username`)
+)
+
+CREATE TABLE usergroups (
+  `groupid` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `groupname` varchar(30) NOT NULL,
+  PRIMARY KEY (`groupid`)
+)
+
+CREATE TABLE querydatabase (
+  `queryid` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) DEFAULT NULL,
+  `query` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `querydate` datetime DEFAULT NULL,
+  PRIMARY KEY (`queryid`)
+) 
+
+CREATE TABLE visitedpage (
+  `visitid` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) DEFAULT NULL,
+  `link` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `visiteddate` datetime DEFAULT NULL,
+  PRIMARY KEY (`visitid`)
+)
+
+CREATE TABLE querysuggestion (
+  `suggestion` int(11) NOT NULL AUTO_INCREMENT,
+  `counter` int(11) DEFAULT NULL,
+  `link` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `query` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`suggestion`)
+)
